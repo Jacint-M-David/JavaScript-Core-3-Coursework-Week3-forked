@@ -70,3 +70,26 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// TASK 1
+const showGryffindor = (peopleAtHogwarts) => {
+  let names = peopleAtHogwarts
+    .filter((wizard) => wizard.house === "Gryffindor")
+    .map(({ firstName, lastName }) => `${firstName} ${lastName}`);
+  console.log("\n", "Task 1:", "\n", names);
+  return names;
+};
+
+showGryffindor(hogwarts);
+
+// TASK 2
+const showPetOwnerTeachers = (peopleAtHogwarts) => {
+  let names = peopleAtHogwarts
+    .filter((magicUsers) => magicUsers.occupation === "Teacher")
+    .filter((teacher) => teacher.pet !== null)
+    .map(({ firstName, lastName }) => `${firstName} ${lastName}`);
+  console.log("\n", "Task 2:", "\n", names, "\n");
+  return names;
+};
+
+showPetOwnerTeachers(hogwarts);

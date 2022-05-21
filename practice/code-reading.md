@@ -16,6 +16,9 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+A: I assume you meant line 4 vs line 7 as on line 6 there is only a curly brace.
+The function is never called therefore the value that x holds remains unchanged.
+
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +37,9 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+A: output: 10, y is not defined
+Explanation: let and const have block level scoping. They only exist in the block they were created in and since we are calling them outside of their blocks they don't exist in that context.
 
 ## Question 3
 
@@ -62,3 +68,8 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+A: Nan - at the time of calling f1(x), x isn't defined and the total of undefined and a number is NaN
+y will be with throw a reference error as you cant reassign the value of values eg 9=10 is an invalid assignment.
+
+change made for PR
